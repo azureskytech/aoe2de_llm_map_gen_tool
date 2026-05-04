@@ -1,0 +1,1135 @@
+/*
+  Team Forest Trade River - generated RMS
+  8 players, intended for 4v4 with slots 1-4 west and 5-8 east.
+  Base terrain is forest; explicit grass lands carve starts and paths.
+  Known limitation: RMS cannot guarantee arbitrary lobby team assignment.
+*/
+
+<PLAYER_SETUP>
+direct_placement
+behavior_version 1
+override_map_size 240
+
+<LAND_GENERATION>
+base_terrain FOREST
+enable_waves 1
+
+/* Central river. Water is left open north and south of the ford. */
+create_land
+{
+  terrain_type WATER
+  land_position 50 1
+  base_size 7
+  number_of_tiles 380
+  border_fuzziness 1
+  zone 70
+}
+
+create_land
+{
+  terrain_type WATER
+  land_position 50 5
+  base_size 7
+  number_of_tiles 380
+  border_fuzziness 1
+  zone 70
+}
+
+create_land
+{
+  terrain_type WATER
+  land_position 50 10
+  base_size 7
+  number_of_tiles 380
+  border_fuzziness 1
+  zone 70
+}
+
+create_land
+{
+  terrain_type WATER
+  land_position 50 15
+  base_size 7
+  number_of_tiles 380
+  border_fuzziness 1
+  zone 70
+}
+
+create_land
+{
+  terrain_type WATER
+  land_position 50 20
+  base_size 7
+  number_of_tiles 380
+  border_fuzziness 1
+  zone 70
+}
+
+create_land
+{
+  terrain_type WATER
+  land_position 50 25
+  base_size 7
+  number_of_tiles 380
+  border_fuzziness 1
+  zone 70
+}
+
+create_land
+{
+  terrain_type WATER
+  land_position 50 30
+  base_size 7
+  number_of_tiles 380
+  border_fuzziness 1
+  zone 70
+}
+
+create_land
+{
+  terrain_type WATER
+  land_position 50 35
+  base_size 7
+  number_of_tiles 380
+  border_fuzziness 1
+  zone 70
+}
+
+create_land
+{
+  terrain_type WATER
+  land_position 50 40
+  base_size 7
+  number_of_tiles 380
+  border_fuzziness 1
+  zone 70
+}
+
+create_land
+{
+  terrain_type WATER
+  land_position 50 60
+  base_size 7
+  number_of_tiles 380
+  border_fuzziness 1
+  zone 70
+}
+
+create_land
+{
+  terrain_type WATER
+  land_position 50 65
+  base_size 7
+  number_of_tiles 380
+  border_fuzziness 1
+  zone 70
+}
+
+create_land
+{
+  terrain_type WATER
+  land_position 50 70
+  base_size 7
+  number_of_tiles 380
+  border_fuzziness 1
+  zone 70
+}
+
+create_land
+{
+  terrain_type WATER
+  land_position 50 75
+  base_size 7
+  number_of_tiles 380
+  border_fuzziness 1
+  zone 70
+}
+
+create_land
+{
+  terrain_type WATER
+  land_position 50 80
+  base_size 7
+  number_of_tiles 380
+  border_fuzziness 1
+  zone 70
+}
+
+create_land
+{
+  terrain_type WATER
+  land_position 50 85
+  base_size 7
+  number_of_tiles 380
+  border_fuzziness 1
+  zone 70
+}
+
+create_land
+{
+  terrain_type WATER
+  land_position 50 90
+  base_size 7
+  number_of_tiles 380
+  border_fuzziness 1
+  zone 70
+}
+
+create_land
+{
+  terrain_type WATER
+  land_position 50 95
+  base_size 7
+  number_of_tiles 380
+  border_fuzziness 1
+  zone 70
+}
+
+create_land
+{
+  terrain_type WATER
+  land_position 50 99
+  base_size 7
+  number_of_tiles 380
+  border_fuzziness 1
+  zone 70
+}
+
+/* Wide central shallows. This is the only intended land route across the river. */
+create_land
+{
+  terrain_type SHALLOW
+  land_position 50 41
+  base_size 13
+  number_of_tiles 900
+  border_fuzziness 1
+  zone 71
+}
+
+create_land
+{
+  terrain_type SHALLOW
+  land_position 50 47
+  base_size 13
+  number_of_tiles 900
+  border_fuzziness 1
+  zone 71
+}
+
+create_land
+{
+  terrain_type SHALLOW
+  land_position 50 53
+  base_size 13
+  number_of_tiles 900
+  border_fuzziness 1
+  zone 71
+}
+
+create_land
+{
+  terrain_type SHALLOW
+  land_position 50 59
+  base_size 13
+  number_of_tiles 900
+  border_fuzziness 1
+  zone 71
+}
+
+/* Team trade corridors: clear north-south routes through every allied TC. */
+create_land
+{
+  terrain_type GRASS
+  land_position 24 1
+  base_size 5
+  number_of_tiles 260
+  border_fuzziness 1
+  zone 80
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 24 5
+  base_size 5
+  number_of_tiles 260
+  border_fuzziness 1
+  zone 80
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 24 10
+  base_size 5
+  number_of_tiles 260
+  border_fuzziness 1
+  zone 80
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 24 15
+  base_size 5
+  number_of_tiles 260
+  border_fuzziness 1
+  zone 80
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 24 20
+  base_size 5
+  number_of_tiles 260
+  border_fuzziness 1
+  zone 80
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 24 25
+  base_size 5
+  number_of_tiles 260
+  border_fuzziness 1
+  zone 80
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 24 30
+  base_size 5
+  number_of_tiles 260
+  border_fuzziness 1
+  zone 80
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 24 35
+  base_size 5
+  number_of_tiles 260
+  border_fuzziness 1
+  zone 80
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 24 40
+  base_size 5
+  number_of_tiles 260
+  border_fuzziness 1
+  zone 80
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 24 45
+  base_size 5
+  number_of_tiles 260
+  border_fuzziness 1
+  zone 80
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 24 50
+  base_size 5
+  number_of_tiles 260
+  border_fuzziness 1
+  zone 80
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 24 55
+  base_size 5
+  number_of_tiles 260
+  border_fuzziness 1
+  zone 80
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 24 60
+  base_size 5
+  number_of_tiles 260
+  border_fuzziness 1
+  zone 80
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 24 65
+  base_size 5
+  number_of_tiles 260
+  border_fuzziness 1
+  zone 80
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 24 70
+  base_size 5
+  number_of_tiles 260
+  border_fuzziness 1
+  zone 80
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 24 75
+  base_size 5
+  number_of_tiles 260
+  border_fuzziness 1
+  zone 80
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 24 80
+  base_size 5
+  number_of_tiles 260
+  border_fuzziness 1
+  zone 80
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 24 85
+  base_size 5
+  number_of_tiles 260
+  border_fuzziness 1
+  zone 80
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 24 90
+  base_size 5
+  number_of_tiles 260
+  border_fuzziness 1
+  zone 80
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 24 95
+  base_size 5
+  number_of_tiles 260
+  border_fuzziness 1
+  zone 80
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 24 99
+  base_size 5
+  number_of_tiles 260
+  border_fuzziness 1
+  zone 80
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 76 1
+  base_size 5
+  number_of_tiles 260
+  border_fuzziness 1
+  zone 81
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 76 5
+  base_size 5
+  number_of_tiles 260
+  border_fuzziness 1
+  zone 81
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 76 10
+  base_size 5
+  number_of_tiles 260
+  border_fuzziness 1
+  zone 81
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 76 15
+  base_size 5
+  number_of_tiles 260
+  border_fuzziness 1
+  zone 81
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 76 20
+  base_size 5
+  number_of_tiles 260
+  border_fuzziness 1
+  zone 81
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 76 25
+  base_size 5
+  number_of_tiles 260
+  border_fuzziness 1
+  zone 81
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 76 30
+  base_size 5
+  number_of_tiles 260
+  border_fuzziness 1
+  zone 81
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 76 35
+  base_size 5
+  number_of_tiles 260
+  border_fuzziness 1
+  zone 81
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 76 40
+  base_size 5
+  number_of_tiles 260
+  border_fuzziness 1
+  zone 81
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 76 45
+  base_size 5
+  number_of_tiles 260
+  border_fuzziness 1
+  zone 81
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 76 50
+  base_size 5
+  number_of_tiles 260
+  border_fuzziness 1
+  zone 81
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 76 55
+  base_size 5
+  number_of_tiles 260
+  border_fuzziness 1
+  zone 81
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 76 60
+  base_size 5
+  number_of_tiles 260
+  border_fuzziness 1
+  zone 81
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 76 65
+  base_size 5
+  number_of_tiles 260
+  border_fuzziness 1
+  zone 81
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 76 70
+  base_size 5
+  number_of_tiles 260
+  border_fuzziness 1
+  zone 81
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 76 75
+  base_size 5
+  number_of_tiles 260
+  border_fuzziness 1
+  zone 81
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 76 80
+  base_size 5
+  number_of_tiles 260
+  border_fuzziness 1
+  zone 81
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 76 85
+  base_size 5
+  number_of_tiles 260
+  border_fuzziness 1
+  zone 81
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 76 90
+  base_size 5
+  number_of_tiles 260
+  border_fuzziness 1
+  zone 81
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 76 95
+  base_size 5
+  number_of_tiles 260
+  border_fuzziness 1
+  zone 81
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 76 99
+  base_size 5
+  number_of_tiles 260
+  border_fuzziness 1
+  zone 81
+}
+
+/* Center access corridors from each trade path to the shallow ford. */
+create_land
+{
+  terrain_type GRASS
+  land_position 24 50
+  base_size 5
+  number_of_tiles 260
+  border_fuzziness 1
+  zone 82
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 29 50
+  base_size 5
+  number_of_tiles 260
+  border_fuzziness 1
+  zone 82
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 34 50
+  base_size 5
+  number_of_tiles 260
+  border_fuzziness 1
+  zone 82
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 37 50
+  base_size 5
+  number_of_tiles 260
+  border_fuzziness 1
+  zone 82
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 76 50
+  base_size 5
+  number_of_tiles 260
+  border_fuzziness 1
+  zone 82
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 71 50
+  base_size 5
+  number_of_tiles 260
+  border_fuzziness 1
+  zone 82
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 66 50
+  base_size 5
+  number_of_tiles 260
+  border_fuzziness 1
+  zone 82
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 63 50
+  base_size 5
+  number_of_tiles 260
+  border_fuzziness 1
+  zone 82
+}
+
+/* Player starts: open circular grass clearings inland from the river edge. */
+create_land
+{
+  terrain_type GRASS
+  land_position 24 14
+  base_size 18
+  number_of_tiles 1900
+  border_fuzziness 2
+  set_circular_base
+  land_id 1
+  assign_to_player 1
+  zone 1
+  other_zone_avoidance_distance 2
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 24 36
+  base_size 18
+  number_of_tiles 1900
+  border_fuzziness 2
+  set_circular_base
+  land_id 2
+  assign_to_player 2
+  zone 2
+  other_zone_avoidance_distance 2
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 24 64
+  base_size 18
+  number_of_tiles 1900
+  border_fuzziness 2
+  set_circular_base
+  land_id 3
+  assign_to_player 3
+  zone 3
+  other_zone_avoidance_distance 2
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 24 86
+  base_size 18
+  number_of_tiles 1900
+  border_fuzziness 2
+  set_circular_base
+  land_id 4
+  assign_to_player 4
+  zone 4
+  other_zone_avoidance_distance 2
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 76 14
+  base_size 18
+  number_of_tiles 1900
+  border_fuzziness 2
+  set_circular_base
+  land_id 5
+  assign_to_player 5
+  zone 5
+  other_zone_avoidance_distance 2
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 76 36
+  base_size 18
+  number_of_tiles 1900
+  border_fuzziness 2
+  set_circular_base
+  land_id 6
+  assign_to_player 6
+  zone 6
+  other_zone_avoidance_distance 2
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 76 64
+  base_size 18
+  number_of_tiles 1900
+  border_fuzziness 2
+  set_circular_base
+  land_id 7
+  assign_to_player 7
+  zone 7
+  other_zone_avoidance_distance 2
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 76 86
+  base_size 18
+  number_of_tiles 1900
+  border_fuzziness 2
+  set_circular_base
+  land_id 8
+  assign_to_player 8
+  zone 8
+  other_zone_avoidance_distance 2
+}
+
+/* Chop-to forest resource pockets: tiny clearings tightly surrounded by trees. */
+create_land
+{
+  terrain_type GRASS
+  land_position 12 25
+  base_size 4
+  number_of_tiles 90
+  border_fuzziness 1
+  set_circular_base
+  land_id 200
+  zone 90
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 38 75
+  base_size 4
+  number_of_tiles 90
+  border_fuzziness 1
+  set_circular_base
+  land_id 201
+  zone 90
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 38 25
+  base_size 4
+  number_of_tiles 90
+  border_fuzziness 1
+  set_circular_base
+  land_id 202
+  zone 90
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 12 75
+  base_size 4
+  number_of_tiles 90
+  border_fuzziness 1
+  set_circular_base
+  land_id 203
+  zone 90
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 88 25
+  base_size 4
+  number_of_tiles 90
+  border_fuzziness 1
+  set_circular_base
+  land_id 204
+  zone 90
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 62 75
+  base_size 4
+  number_of_tiles 90
+  border_fuzziness 1
+  set_circular_base
+  land_id 205
+  zone 90
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 62 25
+  base_size 4
+  number_of_tiles 90
+  border_fuzziness 1
+  set_circular_base
+  land_id 206
+  zone 90
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 88 75
+  base_size 4
+  number_of_tiles 90
+  border_fuzziness 1
+  set_circular_base
+  land_id 207
+  zone 90
+}
+
+<TERRAIN_GENERATION>
+/* No random forest fill is needed: FOREST is the base terrain. */
+/* Grass lands above are deliberate clearings, paths, and resource pockets. */
+
+<OBJECTS_GENERATION>
+/* Standard starting town. */
+create_object TOWN_CENTER
+{
+  set_place_for_every_player
+  terrain_to_place_on GRASS
+  min_distance_to_players 0
+  max_distance_to_players 0
+}
+
+create_object VILLAGER
+{
+  set_place_for_every_player
+  terrain_to_place_on GRASS
+  min_distance_to_players 6
+  max_distance_to_players 7
+}
+
+create_object SCOUT
+{
+  number_of_objects 1
+  set_place_for_every_player
+  terrain_to_place_on GRASS
+  min_distance_to_players 7
+  max_distance_to_players 9
+}
+
+/* Per-player start resources, all inside the open start circle. */
+/* FORAGE assumes 125 food by default; resource_delta -5 makes 5 bushes total 600 food. */
+create_object SHEEP
+{
+  number_of_objects 5
+  set_place_for_every_player
+  set_gaia_object_only
+  set_loose_grouping
+  group_placement_radius 4
+  terrain_to_place_on GRASS
+  min_distance_to_players 6
+  max_distance_to_players 9
+}
+
+create_object FORAGE
+{
+  number_of_objects 5
+  resource_delta -5
+  set_place_for_every_player
+  set_gaia_object_only
+  set_tight_grouping
+  group_placement_radius 2
+  terrain_to_place_on GRASS
+  min_distance_to_players 10
+  max_distance_to_players 13
+}
+
+create_object GOLD
+{
+  number_of_objects 8
+  set_place_for_every_player
+  set_gaia_object_only
+  set_tight_grouping
+  group_placement_radius 2
+  terrain_to_place_on GRASS
+  min_distance_to_players 14
+  max_distance_to_players 18
+}
+
+create_object STONE
+{
+  number_of_objects 5
+  set_place_for_every_player
+  set_gaia_object_only
+  set_tight_grouping
+  group_placement_radius 2
+  terrain_to_place_on GRASS
+  min_distance_to_players 16
+  max_distance_to_players 21
+}
+
+create_object BOAR
+{
+  number_of_objects 4
+  set_place_for_every_player
+  set_gaia_object_only
+  set_loose_grouping
+  group_placement_radius 5
+  terrain_to_place_on GRASS
+  min_distance_to_players 18
+  max_distance_to_players 24
+}
+
+/* Forest expansion pockets. These are not connected to paths at map start. */
+/* west gold pocket, land_id 200. */
+create_object GOLD
+{
+  number_of_objects 8
+  set_gaia_object_only
+  set_tight_grouping
+  group_placement_radius 2
+  terrain_to_place_on GRASS
+  place_on_specific_land_id 200
+}
+
+/* west gold pocket, land_id 201. */
+create_object GOLD
+{
+  number_of_objects 8
+  set_gaia_object_only
+  set_tight_grouping
+  group_placement_radius 2
+  terrain_to_place_on GRASS
+  place_on_specific_land_id 201
+}
+
+/* west stone pocket, land_id 202. */
+create_object STONE
+{
+  number_of_objects 5
+  set_gaia_object_only
+  set_tight_grouping
+  group_placement_radius 2
+  terrain_to_place_on GRASS
+  place_on_specific_land_id 202
+}
+
+/* west stone pocket, land_id 203. */
+create_object STONE
+{
+  number_of_objects 5
+  set_gaia_object_only
+  set_tight_grouping
+  group_placement_radius 2
+  terrain_to_place_on GRASS
+  place_on_specific_land_id 203
+}
+
+/* east gold pocket, land_id 204. */
+create_object GOLD
+{
+  number_of_objects 8
+  set_gaia_object_only
+  set_tight_grouping
+  group_placement_radius 2
+  terrain_to_place_on GRASS
+  place_on_specific_land_id 204
+}
+
+/* east gold pocket, land_id 205. */
+create_object GOLD
+{
+  number_of_objects 8
+  set_gaia_object_only
+  set_tight_grouping
+  group_placement_radius 2
+  terrain_to_place_on GRASS
+  place_on_specific_land_id 205
+}
+
+/* east stone pocket, land_id 206. */
+create_object STONE
+{
+  number_of_objects 5
+  set_gaia_object_only
+  set_tight_grouping
+  group_placement_radius 2
+  terrain_to_place_on GRASS
+  place_on_specific_land_id 206
+}
+
+/* east stone pocket, land_id 207. */
+create_object STONE
+{
+  number_of_objects 5
+  set_gaia_object_only
+  set_tight_grouping
+  group_placement_radius 2
+  terrain_to_place_on GRASS
+  place_on_specific_land_id 207
+}
+
+/* Known playtest checklist: verify no TC spawns on water or forest, */
+/* AIs can reach the shallows from every start, and pocket mines require chopping. */

@@ -1,0 +1,645 @@
+/*
+  Cross Forest Circle - generated RMS
+  8 players, circular fixed starts, forest terrain, cross-shaped rivers.
+*/
+
+<PLAYER_SETUP>
+direct_placement
+behavior_version 1
+override_map_size 240
+
+<LAND_GENERATION>
+base_terrain GRASS
+enable_waves 1
+
+/* North-south river: repeated water lands along x=50. */
+create_land
+{
+  terrain_type WATER
+  land_position 50 1
+  base_size 5
+  number_of_tiles 260
+  border_fuzziness 1
+  zone 90
+}
+
+create_land
+{
+  terrain_type WATER
+  land_position 50 5
+  base_size 5
+  number_of_tiles 260
+  border_fuzziness 1
+  zone 90
+}
+
+create_land
+{
+  terrain_type WATER
+  land_position 50 10
+  base_size 5
+  number_of_tiles 260
+  border_fuzziness 1
+  zone 90
+}
+
+create_land
+{
+  terrain_type WATER
+  land_position 50 15
+  base_size 5
+  number_of_tiles 260
+  border_fuzziness 1
+  zone 90
+}
+
+create_land
+{
+  terrain_type WATER
+  land_position 50 20
+  base_size 5
+  number_of_tiles 260
+  border_fuzziness 1
+  zone 90
+}
+
+create_land
+{
+  terrain_type WATER
+  land_position 50 25
+  base_size 5
+  number_of_tiles 260
+  border_fuzziness 1
+  zone 90
+}
+
+create_land
+{
+  terrain_type WATER
+  land_position 50 30
+  base_size 5
+  number_of_tiles 260
+  border_fuzziness 1
+  zone 90
+}
+
+create_land
+{
+  terrain_type WATER
+  land_position 50 35
+  base_size 5
+  number_of_tiles 260
+  border_fuzziness 1
+  zone 90
+}
+
+create_land
+{
+  terrain_type WATER
+  land_position 50 40
+  base_size 5
+  number_of_tiles 260
+  border_fuzziness 1
+  zone 90
+}
+
+create_land
+{
+  terrain_type WATER
+  land_position 50 45
+  base_size 5
+  number_of_tiles 260
+  border_fuzziness 1
+  zone 90
+}
+
+create_land
+{
+  terrain_type WATER
+  land_position 50 50
+  base_size 5
+  number_of_tiles 260
+  border_fuzziness 1
+  zone 90
+}
+
+create_land
+{
+  terrain_type WATER
+  land_position 50 55
+  base_size 5
+  number_of_tiles 260
+  border_fuzziness 1
+  zone 90
+}
+
+create_land
+{
+  terrain_type WATER
+  land_position 50 60
+  base_size 5
+  number_of_tiles 260
+  border_fuzziness 1
+  zone 90
+}
+
+create_land
+{
+  terrain_type WATER
+  land_position 50 65
+  base_size 5
+  number_of_tiles 260
+  border_fuzziness 1
+  zone 90
+}
+
+create_land
+{
+  terrain_type WATER
+  land_position 50 70
+  base_size 5
+  number_of_tiles 260
+  border_fuzziness 1
+  zone 90
+}
+
+create_land
+{
+  terrain_type WATER
+  land_position 50 75
+  base_size 5
+  number_of_tiles 260
+  border_fuzziness 1
+  zone 90
+}
+
+create_land
+{
+  terrain_type WATER
+  land_position 50 80
+  base_size 5
+  number_of_tiles 260
+  border_fuzziness 1
+  zone 90
+}
+
+create_land
+{
+  terrain_type WATER
+  land_position 50 85
+  base_size 5
+  number_of_tiles 260
+  border_fuzziness 1
+  zone 90
+}
+
+create_land
+{
+  terrain_type WATER
+  land_position 50 90
+  base_size 5
+  number_of_tiles 260
+  border_fuzziness 1
+  zone 90
+}
+
+create_land
+{
+  terrain_type WATER
+  land_position 50 95
+  base_size 5
+  number_of_tiles 260
+  border_fuzziness 1
+  zone 90
+}
+
+create_land
+{
+  terrain_type WATER
+  land_position 50 99
+  base_size 5
+  number_of_tiles 260
+  border_fuzziness 1
+  zone 90
+}
+
+/* East-west river: repeated water lands along y=50. */
+create_land
+{
+  terrain_type WATER
+  land_position 1 50
+  base_size 5
+  number_of_tiles 260
+  border_fuzziness 1
+  zone 91
+}
+
+create_land
+{
+  terrain_type WATER
+  land_position 5 50
+  base_size 5
+  number_of_tiles 260
+  border_fuzziness 1
+  zone 91
+}
+
+create_land
+{
+  terrain_type WATER
+  land_position 10 50
+  base_size 5
+  number_of_tiles 260
+  border_fuzziness 1
+  zone 91
+}
+
+create_land
+{
+  terrain_type WATER
+  land_position 15 50
+  base_size 5
+  number_of_tiles 260
+  border_fuzziness 1
+  zone 91
+}
+
+create_land
+{
+  terrain_type WATER
+  land_position 20 50
+  base_size 5
+  number_of_tiles 260
+  border_fuzziness 1
+  zone 91
+}
+
+create_land
+{
+  terrain_type WATER
+  land_position 25 50
+  base_size 5
+  number_of_tiles 260
+  border_fuzziness 1
+  zone 91
+}
+
+create_land
+{
+  terrain_type WATER
+  land_position 30 50
+  base_size 5
+  number_of_tiles 260
+  border_fuzziness 1
+  zone 91
+}
+
+create_land
+{
+  terrain_type WATER
+  land_position 35 50
+  base_size 5
+  number_of_tiles 260
+  border_fuzziness 1
+  zone 91
+}
+
+create_land
+{
+  terrain_type WATER
+  land_position 40 50
+  base_size 5
+  number_of_tiles 260
+  border_fuzziness 1
+  zone 91
+}
+
+create_land
+{
+  terrain_type WATER
+  land_position 45 50
+  base_size 5
+  number_of_tiles 260
+  border_fuzziness 1
+  zone 91
+}
+
+create_land
+{
+  terrain_type WATER
+  land_position 50 50
+  base_size 5
+  number_of_tiles 260
+  border_fuzziness 1
+  zone 91
+}
+
+create_land
+{
+  terrain_type WATER
+  land_position 55 50
+  base_size 5
+  number_of_tiles 260
+  border_fuzziness 1
+  zone 91
+}
+
+create_land
+{
+  terrain_type WATER
+  land_position 60 50
+  base_size 5
+  number_of_tiles 260
+  border_fuzziness 1
+  zone 91
+}
+
+create_land
+{
+  terrain_type WATER
+  land_position 65 50
+  base_size 5
+  number_of_tiles 260
+  border_fuzziness 1
+  zone 91
+}
+
+create_land
+{
+  terrain_type WATER
+  land_position 70 50
+  base_size 5
+  number_of_tiles 260
+  border_fuzziness 1
+  zone 91
+}
+
+create_land
+{
+  terrain_type WATER
+  land_position 75 50
+  base_size 5
+  number_of_tiles 260
+  border_fuzziness 1
+  zone 91
+}
+
+create_land
+{
+  terrain_type WATER
+  land_position 80 50
+  base_size 5
+  number_of_tiles 260
+  border_fuzziness 1
+  zone 91
+}
+
+create_land
+{
+  terrain_type WATER
+  land_position 85 50
+  base_size 5
+  number_of_tiles 260
+  border_fuzziness 1
+  zone 91
+}
+
+create_land
+{
+  terrain_type WATER
+  land_position 90 50
+  base_size 5
+  number_of_tiles 260
+  border_fuzziness 1
+  zone 91
+}
+
+create_land
+{
+  terrain_type WATER
+  land_position 95 50
+  base_size 5
+  number_of_tiles 260
+  border_fuzziness 1
+  zone 91
+}
+
+create_land
+{
+  terrain_type WATER
+  land_position 99 50
+  base_size 5
+  number_of_tiles 260
+  border_fuzziness 1
+  zone 91
+}
+
+/* Player lands: two starts per quadrant, arranged in a ring around the center. */
+create_land
+{
+  terrain_type GRASS
+  land_position 38 20
+  base_size 13
+  number_of_tiles 900
+  border_fuzziness 2
+  assign_to_player 1
+  zone 1
+  other_zone_avoidance_distance 4
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 62 20
+  base_size 13
+  number_of_tiles 900
+  border_fuzziness 2
+  assign_to_player 2
+  zone 2
+  other_zone_avoidance_distance 4
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 80 38
+  base_size 13
+  number_of_tiles 900
+  border_fuzziness 2
+  assign_to_player 3
+  zone 3
+  other_zone_avoidance_distance 4
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 80 62
+  base_size 13
+  number_of_tiles 900
+  border_fuzziness 2
+  assign_to_player 4
+  zone 4
+  other_zone_avoidance_distance 4
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 62 80
+  base_size 13
+  number_of_tiles 900
+  border_fuzziness 2
+  assign_to_player 5
+  zone 5
+  other_zone_avoidance_distance 4
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 38 80
+  base_size 13
+  number_of_tiles 900
+  border_fuzziness 2
+  assign_to_player 6
+  zone 6
+  other_zone_avoidance_distance 4
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 20 62
+  base_size 13
+  number_of_tiles 900
+  border_fuzziness 2
+  assign_to_player 7
+  zone 7
+  other_zone_avoidance_distance 4
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 20 38
+  base_size 13
+  number_of_tiles 900
+  border_fuzziness 2
+  assign_to_player 8
+  zone 8
+  other_zone_avoidance_distance 4
+}
+
+<TERRAIN_GENERATION>
+/* Fill remaining grass with forest while keeping starts and rivers open. */
+create_terrain FOREST
+{
+  base_terrain GRASS
+  land_percent 100
+  number_of_clumps 999
+  set_avoid_player_start_areas 16
+  spacing_to_specific_terrain WATER 2
+}
+
+<OBJECTS_GENERATION>
+/* Standard starting town. */
+create_object TOWN_CENTER
+{
+  set_place_for_every_player
+  min_distance_to_players 0
+  max_distance_to_players 0
+}
+
+create_object VILLAGER
+{
+  set_place_for_every_player
+  min_distance_to_players 6
+  max_distance_to_players 7
+}
+
+create_object SCOUT
+{
+  set_place_for_every_player
+  min_distance_to_players 7
+  max_distance_to_players 9
+}
+
+/* Per-player resources placed on clear grass near starts. */
+create_object SHEEP
+{
+  number_of_objects 4
+  set_place_for_every_player
+  set_gaia_object_only
+  set_loose_grouping
+  terrain_to_place_on GRASS
+  min_distance_to_players 7
+  max_distance_to_players 10
+}
+
+create_object FORAGE
+{
+  number_of_objects 6
+  set_place_for_every_player
+  set_gaia_object_only
+  set_tight_grouping
+  terrain_to_place_on GRASS
+  min_distance_to_players 10
+  max_distance_to_players 14
+}
+
+create_object GOLD
+{
+  number_of_objects 7
+  set_place_for_every_player
+  set_gaia_object_only
+  set_tight_grouping
+  terrain_to_place_on GRASS
+  min_distance_to_players 15
+  max_distance_to_players 20
+}
+
+create_object STONE
+{
+  number_of_objects 4
+  set_place_for_every_player
+  set_gaia_object_only
+  set_tight_grouping
+  terrain_to_place_on GRASS
+  min_distance_to_players 18
+  max_distance_to_players 24
+}
+
+create_object BOAR
+{
+  number_of_objects 2
+  set_place_for_every_player
+  set_gaia_object_only
+  set_loose_grouping
+  terrain_to_place_on GRASS
+  min_distance_to_players 16
+  max_distance_to_players 23
+}
+
+/* Extra neutral gold and stone in the four quadrants, away from the river. */
+create_object GOLD
+{
+  number_of_objects 5
+  number_of_groups 8
+  set_gaia_object_only
+  set_tight_grouping
+  terrain_to_place_on GRASS
+  min_distance_to_players 25
+  min_distance_to_map_edge 8
+}
+
+create_object STONE
+{
+  number_of_objects 4
+  number_of_groups 8
+  set_gaia_object_only
+  set_tight_grouping
+  terrain_to_place_on GRASS
+  min_distance_to_players 25
+  min_distance_to_map_edge 8
+}
