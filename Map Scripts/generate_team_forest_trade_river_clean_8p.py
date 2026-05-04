@@ -33,11 +33,11 @@ from pathlib import Path
 
 
 MAP_NAME = "Team Forest Trade River Clean"
-DEFAULT_PRESET = "v15"
+DEFAULT_PRESET = "v16"
 DEFAULT_OUTPUT = (
     Path(__file__).resolve().parents[1]
     / "Generated Maps"
-    / "team_forest_trade_river_8p_v15.rms"
+    / "team_forest_trade_river_8p_v16.rms"
 )
 
 VERSION_PRESETS: dict[str, dict[str, int]] = {
@@ -201,6 +201,7 @@ VERSION_PRESETS: dict[str, dict[str, int]] = {
         "map_size": 480,
         "enable_waves": 0,
         "bounded_terrain": 0,
+        "bounded_water": 0,
         "team_lane_x": 24,
         "river_half_width": 6,
         "ford_half_height": 4,
@@ -214,6 +215,35 @@ VERSION_PRESETS: dict[str, dict[str, int]] = {
         "river_tiles": 850,
         "path_base_size": 5,
         "path_tiles": 850,
+        "shallow_base_size": 5,
+        "shallow_tiles": 550,
+        "start_base_size": 16,
+        "start_tiles": 1500,
+        "pocket_base_size": 8,
+        "pocket_tiles": 360,
+        "pocket_gold_nodes": 6,
+        "pocket_stone_nodes": 6,
+    },
+    # v16: bounded WATER river (2 blocks instead of 22 stamps), wider path stamps,
+    # team_positions support, fish/birds/relics.
+    "v16": {
+        "map_size": 480,
+        "enable_waves": 0,
+        "bounded_terrain": 0,
+        "bounded_water": 1,
+        "team_lane_x": 24,
+        "river_half_width": 6,
+        "ford_half_height": 4,
+        "path_half_width": 2,
+        "start_clear_radius": 8,
+        "pocket_radius": 4,
+        "water_step": 4,
+        "path_step": 6,
+        "shallow_step": 3,
+        "river_base_size": 8,
+        "river_tiles": 850,
+        "path_base_size": 6,
+        "path_tiles": 2000,
         "shallow_base_size": 5,
         "shallow_tiles": 550,
         "start_base_size": 16,
@@ -654,6 +684,7 @@ def validate_stamp_coverage(
     *,
     geometry: Geometry,
     map_size: int,
+    bounded_water: bool,
     water_step: int,
     path_step: int,
     shallow_step: int,
@@ -665,16 +696,17 @@ def validate_stamp_coverage(
     shallow_tiles: int,
 ) -> None:
     """Validate that repeated RMS stamps are dense enough at the actual map size."""
-    north_water = stamps_between(3, geometry.ford_y1 - 3, water_step)
-    south_water = stamps_between(geometry.ford_y2 + 3, 97, water_step)
-    for name, positions in [("north river water", north_water), ("south river water", south_water)]:
-        require_axis_coverage(
-            feature=name,
-            positions=positions,
-            map_size=map_size,
-            base_size=river_base_size,
-            number_of_tiles=river_tiles,
-        )
+    if not bounded_water:
+        north_water = stamps_between(3, geometry.ford_y1 - 3, water_step)
+        south_water = stamps_between(geometry.ford_y2 + 3, 97, water_step)
+        for name, positions in [("north river water", north_water), ("south river water", south_water)]:
+            require_axis_coverage(
+                feature=name,
+                positions=positions,
+                map_size=map_size,
+                base_size=river_base_size,
+                number_of_tiles=river_tiles,
+            )
 
     trade_y = stamps_between(1, 99, path_step)
     for name in ["west trade path", "east trade path"]:
@@ -740,6 +772,7 @@ def terrain_land_blocks(
     *,
     geometry: Geometry,
     bounded_terrain: bool,
+    bounded_water: bool,
     water_step: int,
     path_step: int,
     shallow_step: int,
@@ -820,29 +853,53 @@ def terrain_land_blocks(
             ]
         )
     else:
-        # WATER bands, with a clean SHALLOW gap in the middle.
-        for y in stamps_between(3, geometry.ford_y1 - 3, water_step):
-            blocks.append(
-                land_block(
-                    "WATER",
-                    50,
-                    y,
-                    base_size=river_base_size,
-                    number_of_tiles=river_tiles,
-                    extra_lines=["zone 70"],
-                )
+        if bounded_water:
+            # Two bounded WATER blocks replace many stamps: eliminates blend-tile
+            # generation cost for the most expensive terrain type on ludicrous maps.
+            blocks.extend(
+                [
+                    bounded_land_block(
+                        "WATER",
+                        geometry.river_x1,
+                        1,
+                        geometry.river_x2,
+                        geometry.ford_y1 - 1,
+                        extra_lines=["zone 70"],
+                    ),
+                    bounded_land_block(
+                        "WATER",
+                        geometry.river_x1,
+                        geometry.ford_y2 + 1,
+                        geometry.river_x2,
+                        99,
+                        extra_lines=["zone 70"],
+                    ),
+                ]
             )
-        for y in stamps_between(geometry.ford_y2 + 3, 97, water_step):
-            blocks.append(
-                land_block(
-                    "WATER",
-                    50,
-                    y,
-                    base_size=river_base_size,
-                    number_of_tiles=river_tiles,
-                    extra_lines=["zone 70"],
+        else:
+            # WATER bands, with a clean SHALLOW gap in the middle.
+            for y in stamps_between(3, geometry.ford_y1 - 3, water_step):
+                blocks.append(
+                    land_block(
+                        "WATER",
+                        50,
+                        y,
+                        base_size=river_base_size,
+                        number_of_tiles=river_tiles,
+                        extra_lines=["zone 70"],
+                    )
                 )
-            )
+            for y in stamps_between(geometry.ford_y2 + 3, 97, water_step):
+                blocks.append(
+                    land_block(
+                        "WATER",
+                        50,
+                        y,
+                        base_size=river_base_size,
+                        number_of_tiles=river_tiles,
+                        extra_lines=["zone 70"],
+                    )
+                )
 
         # Trade lanes: broad enough for carts, low stamp count.
         for lane_x, zone in [(geometry.west_lane, 80), (geometry.east_lane, 81)]:
@@ -1067,6 +1124,42 @@ def object_generation_blocks(*, pocket_gold_nodes: int, pocket_stone_nodes: int)
             blocks.append(f"/* {pocket.resource.lower()} node {node}/{nodes}. */")
             blocks.append("")
 
+    blocks.extend(
+        [
+            "/* Ambient and neutral objects. */",
+            object_block(
+                "HAWK",
+                [
+                    "number_of_objects 6",
+                    "set_scaling_to_map_size",
+                ],
+            ),
+            "",
+            object_block(
+                "FISH",
+                [
+                    "number_of_objects 20",
+                    "set_gaia_object_only",
+                    "set_loose_grouping",
+                    "group_placement_radius 5",
+                    "terrain_to_place_on WATER",
+                ],
+            ),
+            "",
+            object_block(
+                "RELIC",
+                [
+                    "number_of_objects 5",
+                    "set_gaia_object_only",
+                    "terrain_to_place_on GRASS",
+                    "min_distance_to_players 30",
+                    "max_distance_to_players 80",
+                ],
+            ),
+            "",
+        ]
+    )
+
     return blocks
 
 
@@ -1077,6 +1170,7 @@ def generate_rms(
     map_size: int,
     enable_waves: int,
     bounded_terrain: bool,
+    bounded_water: bool,
     geometry: Geometry,
     water_step: int,
     path_step: int,
@@ -1100,6 +1194,7 @@ def generate_rms(
         validate_stamp_coverage(
             geometry=geometry,
             map_size=map_size,
+            bounded_water=bounded_water,
             water_step=water_step,
             path_step=path_step,
             shallow_step=shallow_step,
@@ -1114,6 +1209,10 @@ def generate_rms(
     if bounded_terrain:
         validation_note = (
             "  Python validation passed: no explicit terrain conflicts; bounded terrain mode does not use route stamps."
+        )
+    elif bounded_water and validate_coverage:
+        validation_note = (
+            "  Python validation passed: no explicit terrain conflicts; river uses bounded terrain; path stamp coverage validated."
         )
     elif validate_coverage:
         validation_note = (
@@ -1137,6 +1236,7 @@ def generate_rms(
         "direct_placement",
         "behavior_version 1",
         f"override_map_size {map_size}",
+        "team_positions",
         "",
         "<LAND_GENERATION>",
         "base_terrain FOREST",
@@ -1148,6 +1248,7 @@ def generate_rms(
     terrain_blocks = terrain_land_blocks(
         geometry=geometry,
         bounded_terrain=bounded_terrain,
+        bounded_water=bounded_water,
         water_step=water_step,
         path_step=path_step,
         shallow_step=shallow_step,
@@ -1213,7 +1314,8 @@ def main() -> None:
     parser.add_argument("--self-test-validator", action="store_true", help="Confirm that the terrain validator flags a deliberate conflict")
     parser.add_argument("--map-size", type=int, default=preset["map_size"], help="override_map_size value, 36..480")
     parser.add_argument("--enable-waves", type=int, choices=[0, 1], default=preset["enable_waves"], help="RMS enable_waves value")
-    parser.add_argument("--bounded-terrain", type=int, choices=[0, 1], default=preset["bounded_terrain"], help="Use border-constrained terrain rectangles for main routes")
+    parser.add_argument("--bounded-terrain", type=int, choices=[0, 1], default=preset["bounded_terrain"], help="Use border-constrained terrain rectangles for all routes")
+    parser.add_argument("--bounded-water", type=int, choices=[0, 1], default=preset.get("bounded_water", 0), help="Use border-constrained rectangles for river WATER only (reduces blend cost)")
     parser.add_argument("--team-lane-x", type=int, default=preset["team_lane_x"], help="West trade lane x percent; east mirrors it")
     parser.add_argument("--river-half-width", type=int, default=preset["river_half_width"], help="Half-width of the reserved river in percent")
     parser.add_argument("--ford-half-height", type=int, default=preset["ford_half_height"], help="Half-height of the central shallow ford in percent")
@@ -1272,6 +1374,7 @@ def main() -> None:
 
     geometry = geometry_from_args(args)
     bounded_terrain = bool(args.bounded_terrain)
+    bounded_water = bool(args.bounded_water)
     plan = build_plan(geometry)
     plan.require_no_conflicts()
     if bounded_terrain:
@@ -1290,6 +1393,7 @@ def main() -> None:
         validate_stamp_coverage(
             geometry=geometry,
             map_size=args.map_size,
+            bounded_water=bounded_water,
             water_step=args.water_step,
             path_step=args.path_step,
             shallow_step=args.shallow_step,
@@ -1300,11 +1404,18 @@ def main() -> None:
             shallow_base_size=args.shallow_base_size,
             shallow_tiles=args.shallow_tiles,
         )
-        print(
-            "Validation passed: "
-            f"{len(plan.cells)} explicit terrain cells, 0 terrain conflicts, "
-            f"0 map-size stamp coverage gaps at size {args.map_size}."
-        )
+        if bounded_water:
+            print(
+                "Validation passed: "
+                f"{len(plan.cells)} explicit terrain cells, 0 terrain conflicts; "
+                f"river uses bounded terrain; 0 path stamp coverage gaps at size {args.map_size}."
+            )
+        else:
+            print(
+                "Validation passed: "
+                f"{len(plan.cells)} explicit terrain cells, 0 terrain conflicts, "
+                f"0 map-size stamp coverage gaps at size {args.map_size}."
+            )
 
     if args.validate_only:
         return
@@ -1315,6 +1426,7 @@ def main() -> None:
         map_size=args.map_size,
         enable_waves=args.enable_waves,
         bounded_terrain=bounded_terrain,
+        bounded_water=bounded_water,
         geometry=geometry,
         water_step=args.water_step,
         path_step=args.path_step,

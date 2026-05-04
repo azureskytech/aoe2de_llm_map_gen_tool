@@ -1,0 +1,1521 @@
+/*
+  Team Forest Trade River Clean - generated RMS
+  8 players, intended for team games with slots 1-4 west and 5-8 east.
+  Config preset: v16.
+  Base terrain is FOREST; explicit non-overlapping lands carve river, ford, paths, starts, and pockets.
+  Python validation passed: no explicit terrain conflicts; river uses bounded terrain; path stamp coverage validated.
+*/
+
+<PLAYER_SETUP>
+direct_placement
+behavior_version 1
+override_map_size 480
+team_positions
+
+<LAND_GENERATION>
+base_terrain FOREST
+enable_waves 0
+
+/* Main terrain features. The internal validator rejects mixed-terrain overlaps. */
+create_land
+{
+  terrain_type WATER
+  land_position 50 23
+  land_percent 100
+  left_border 44
+  right_border 44
+  top_border 1
+  bottom_border 55
+  border_fuzziness 100
+  zone 70
+}
+
+create_land
+{
+  terrain_type WATER
+  land_position 50 77
+  land_percent 100
+  left_border 44
+  right_border 44
+  top_border 55
+  bottom_border 1
+  border_fuzziness 100
+  zone 70
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 24 1
+  base_size 6
+  number_of_tiles 2000
+  border_fuzziness 1
+  zone 80
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 24 7
+  base_size 6
+  number_of_tiles 2000
+  border_fuzziness 1
+  zone 80
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 24 13
+  base_size 6
+  number_of_tiles 2000
+  border_fuzziness 1
+  zone 80
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 24 19
+  base_size 6
+  number_of_tiles 2000
+  border_fuzziness 1
+  zone 80
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 24 25
+  base_size 6
+  number_of_tiles 2000
+  border_fuzziness 1
+  zone 80
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 24 31
+  base_size 6
+  number_of_tiles 2000
+  border_fuzziness 1
+  zone 80
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 24 37
+  base_size 6
+  number_of_tiles 2000
+  border_fuzziness 1
+  zone 80
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 24 43
+  base_size 6
+  number_of_tiles 2000
+  border_fuzziness 1
+  zone 80
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 24 49
+  base_size 6
+  number_of_tiles 2000
+  border_fuzziness 1
+  zone 80
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 24 55
+  base_size 6
+  number_of_tiles 2000
+  border_fuzziness 1
+  zone 80
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 24 61
+  base_size 6
+  number_of_tiles 2000
+  border_fuzziness 1
+  zone 80
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 24 67
+  base_size 6
+  number_of_tiles 2000
+  border_fuzziness 1
+  zone 80
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 24 73
+  base_size 6
+  number_of_tiles 2000
+  border_fuzziness 1
+  zone 80
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 24 79
+  base_size 6
+  number_of_tiles 2000
+  border_fuzziness 1
+  zone 80
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 24 85
+  base_size 6
+  number_of_tiles 2000
+  border_fuzziness 1
+  zone 80
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 24 91
+  base_size 6
+  number_of_tiles 2000
+  border_fuzziness 1
+  zone 80
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 24 97
+  base_size 6
+  number_of_tiles 2000
+  border_fuzziness 1
+  zone 80
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 24 99
+  base_size 6
+  number_of_tiles 2000
+  border_fuzziness 1
+  zone 80
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 76 1
+  base_size 6
+  number_of_tiles 2000
+  border_fuzziness 1
+  zone 81
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 76 7
+  base_size 6
+  number_of_tiles 2000
+  border_fuzziness 1
+  zone 81
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 76 13
+  base_size 6
+  number_of_tiles 2000
+  border_fuzziness 1
+  zone 81
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 76 19
+  base_size 6
+  number_of_tiles 2000
+  border_fuzziness 1
+  zone 81
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 76 25
+  base_size 6
+  number_of_tiles 2000
+  border_fuzziness 1
+  zone 81
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 76 31
+  base_size 6
+  number_of_tiles 2000
+  border_fuzziness 1
+  zone 81
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 76 37
+  base_size 6
+  number_of_tiles 2000
+  border_fuzziness 1
+  zone 81
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 76 43
+  base_size 6
+  number_of_tiles 2000
+  border_fuzziness 1
+  zone 81
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 76 49
+  base_size 6
+  number_of_tiles 2000
+  border_fuzziness 1
+  zone 81
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 76 55
+  base_size 6
+  number_of_tiles 2000
+  border_fuzziness 1
+  zone 81
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 76 61
+  base_size 6
+  number_of_tiles 2000
+  border_fuzziness 1
+  zone 81
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 76 67
+  base_size 6
+  number_of_tiles 2000
+  border_fuzziness 1
+  zone 81
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 76 73
+  base_size 6
+  number_of_tiles 2000
+  border_fuzziness 1
+  zone 81
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 76 79
+  base_size 6
+  number_of_tiles 2000
+  border_fuzziness 1
+  zone 81
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 76 85
+  base_size 6
+  number_of_tiles 2000
+  border_fuzziness 1
+  zone 81
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 76 91
+  base_size 6
+  number_of_tiles 2000
+  border_fuzziness 1
+  zone 81
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 76 97
+  base_size 6
+  number_of_tiles 2000
+  border_fuzziness 1
+  zone 81
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 76 99
+  base_size 6
+  number_of_tiles 2000
+  border_fuzziness 1
+  zone 81
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 24 50
+  base_size 6
+  number_of_tiles 2000
+  border_fuzziness 1
+  zone 82
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 30 50
+  base_size 6
+  number_of_tiles 2000
+  border_fuzziness 1
+  zone 82
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 36 50
+  base_size 6
+  number_of_tiles 2000
+  border_fuzziness 1
+  zone 82
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 42 50
+  base_size 6
+  number_of_tiles 2000
+  border_fuzziness 1
+  zone 82
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 43 50
+  base_size 6
+  number_of_tiles 2000
+  border_fuzziness 1
+  zone 82
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 57 50
+  base_size 6
+  number_of_tiles 2000
+  border_fuzziness 1
+  zone 82
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 63 50
+  base_size 6
+  number_of_tiles 2000
+  border_fuzziness 1
+  zone 82
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 69 50
+  base_size 6
+  number_of_tiles 2000
+  border_fuzziness 1
+  zone 82
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 75 50
+  base_size 6
+  number_of_tiles 2000
+  border_fuzziness 1
+  zone 82
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 76 50
+  base_size 6
+  number_of_tiles 2000
+  border_fuzziness 1
+  zone 82
+}
+
+create_land
+{
+  terrain_type SHALLOW
+  land_position 45 46
+  base_size 5
+  number_of_tiles 550
+  border_fuzziness 1
+  zone 71
+}
+
+create_land
+{
+  terrain_type SHALLOW
+  land_position 48 46
+  base_size 5
+  number_of_tiles 550
+  border_fuzziness 1
+  zone 71
+}
+
+create_land
+{
+  terrain_type SHALLOW
+  land_position 51 46
+  base_size 5
+  number_of_tiles 550
+  border_fuzziness 1
+  zone 71
+}
+
+create_land
+{
+  terrain_type SHALLOW
+  land_position 54 46
+  base_size 5
+  number_of_tiles 550
+  border_fuzziness 1
+  zone 71
+}
+
+create_land
+{
+  terrain_type SHALLOW
+  land_position 55 46
+  base_size 5
+  number_of_tiles 550
+  border_fuzziness 1
+  zone 71
+}
+
+create_land
+{
+  terrain_type SHALLOW
+  land_position 45 49
+  base_size 5
+  number_of_tiles 550
+  border_fuzziness 1
+  zone 71
+}
+
+create_land
+{
+  terrain_type SHALLOW
+  land_position 48 49
+  base_size 5
+  number_of_tiles 550
+  border_fuzziness 1
+  zone 71
+}
+
+create_land
+{
+  terrain_type SHALLOW
+  land_position 51 49
+  base_size 5
+  number_of_tiles 550
+  border_fuzziness 1
+  zone 71
+}
+
+create_land
+{
+  terrain_type SHALLOW
+  land_position 54 49
+  base_size 5
+  number_of_tiles 550
+  border_fuzziness 1
+  zone 71
+}
+
+create_land
+{
+  terrain_type SHALLOW
+  land_position 55 49
+  base_size 5
+  number_of_tiles 550
+  border_fuzziness 1
+  zone 71
+}
+
+create_land
+{
+  terrain_type SHALLOW
+  land_position 45 52
+  base_size 5
+  number_of_tiles 550
+  border_fuzziness 1
+  zone 71
+}
+
+create_land
+{
+  terrain_type SHALLOW
+  land_position 48 52
+  base_size 5
+  number_of_tiles 550
+  border_fuzziness 1
+  zone 71
+}
+
+create_land
+{
+  terrain_type SHALLOW
+  land_position 51 52
+  base_size 5
+  number_of_tiles 550
+  border_fuzziness 1
+  zone 71
+}
+
+create_land
+{
+  terrain_type SHALLOW
+  land_position 54 52
+  base_size 5
+  number_of_tiles 550
+  border_fuzziness 1
+  zone 71
+}
+
+create_land
+{
+  terrain_type SHALLOW
+  land_position 55 52
+  base_size 5
+  number_of_tiles 550
+  border_fuzziness 1
+  zone 71
+}
+
+create_land
+{
+  terrain_type SHALLOW
+  land_position 45 54
+  base_size 5
+  number_of_tiles 550
+  border_fuzziness 1
+  zone 71
+}
+
+create_land
+{
+  terrain_type SHALLOW
+  land_position 48 54
+  base_size 5
+  number_of_tiles 550
+  border_fuzziness 1
+  zone 71
+}
+
+create_land
+{
+  terrain_type SHALLOW
+  land_position 51 54
+  base_size 5
+  number_of_tiles 550
+  border_fuzziness 1
+  zone 71
+}
+
+create_land
+{
+  terrain_type SHALLOW
+  land_position 54 54
+  base_size 5
+  number_of_tiles 550
+  border_fuzziness 1
+  zone 71
+}
+
+create_land
+{
+  terrain_type SHALLOW
+  land_position 55 54
+  base_size 5
+  number_of_tiles 550
+  border_fuzziness 1
+  zone 71
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 24 14
+  base_size 16
+  number_of_tiles 1500
+  border_fuzziness 2
+  set_circular_base
+  land_id 1
+  assign_to_player 1
+  zone 1
+  other_zone_avoidance_distance 2
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 24 36
+  base_size 16
+  number_of_tiles 1500
+  border_fuzziness 2
+  set_circular_base
+  land_id 2
+  assign_to_player 2
+  zone 2
+  other_zone_avoidance_distance 2
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 24 64
+  base_size 16
+  number_of_tiles 1500
+  border_fuzziness 2
+  set_circular_base
+  land_id 3
+  assign_to_player 3
+  zone 3
+  other_zone_avoidance_distance 2
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 24 86
+  base_size 16
+  number_of_tiles 1500
+  border_fuzziness 2
+  set_circular_base
+  land_id 4
+  assign_to_player 4
+  zone 4
+  other_zone_avoidance_distance 2
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 76 14
+  base_size 16
+  number_of_tiles 1500
+  border_fuzziness 2
+  set_circular_base
+  land_id 5
+  assign_to_player 5
+  zone 5
+  other_zone_avoidance_distance 2
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 76 36
+  base_size 16
+  number_of_tiles 1500
+  border_fuzziness 2
+  set_circular_base
+  land_id 6
+  assign_to_player 6
+  zone 6
+  other_zone_avoidance_distance 2
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 76 64
+  base_size 16
+  number_of_tiles 1500
+  border_fuzziness 2
+  set_circular_base
+  land_id 7
+  assign_to_player 7
+  zone 7
+  other_zone_avoidance_distance 2
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 76 86
+  base_size 16
+  number_of_tiles 1500
+  border_fuzziness 2
+  set_circular_base
+  land_id 8
+  assign_to_player 8
+  zone 8
+  other_zone_avoidance_distance 2
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 13 24
+  base_size 8
+  number_of_tiles 360
+  border_fuzziness 1
+  set_circular_base
+  land_id 200
+  zone 90
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 36 76
+  base_size 8
+  number_of_tiles 360
+  border_fuzziness 1
+  set_circular_base
+  land_id 201
+  zone 90
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 36 24
+  base_size 8
+  number_of_tiles 360
+  border_fuzziness 1
+  set_circular_base
+  land_id 202
+  zone 90
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 13 76
+  base_size 8
+  number_of_tiles 360
+  border_fuzziness 1
+  set_circular_base
+  land_id 203
+  zone 90
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 87 24
+  base_size 8
+  number_of_tiles 360
+  border_fuzziness 1
+  set_circular_base
+  land_id 204
+  zone 90
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 64 76
+  base_size 8
+  number_of_tiles 360
+  border_fuzziness 1
+  set_circular_base
+  land_id 205
+  zone 90
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 64 24
+  base_size 8
+  number_of_tiles 360
+  border_fuzziness 1
+  set_circular_base
+  land_id 206
+  zone 90
+}
+
+create_land
+{
+  terrain_type GRASS
+  land_position 87 76
+  base_size 8
+  number_of_tiles 360
+  border_fuzziness 1
+  set_circular_base
+  land_id 207
+  zone 90
+}
+
+<TERRAIN_GENERATION>
+/* No forest fill section: FOREST is the base terrain. */
+
+<OBJECTS_GENERATION>
+/* Standard starting town. */
+create_object TOWN_CENTER
+{
+  set_place_for_every_player
+  terrain_to_place_on GRASS
+  min_distance_to_players 0
+  max_distance_to_players 0
+}
+
+create_object VILLAGER
+{
+  number_of_objects 3
+  set_place_for_every_player
+  terrain_to_place_on GRASS
+  min_distance_to_players 6
+  max_distance_to_players 7
+}
+
+create_object SCOUT
+{
+  number_of_objects 1
+  set_place_for_every_player
+  terrain_to_place_on GRASS
+  min_distance_to_players 7
+  max_distance_to_players 9
+}
+
+/* Per-player start resources inside the open start circle. */
+create_object SHEEP
+{
+  number_of_objects 5
+  set_place_for_every_player
+  set_gaia_object_only
+  set_loose_grouping
+  group_placement_radius 4
+  terrain_to_place_on GRASS
+  min_distance_to_players 6
+  max_distance_to_players 9
+}
+
+create_object FORAGE
+{
+  number_of_objects 5
+  resource_delta -5
+  set_place_for_every_player
+  set_gaia_object_only
+  set_tight_grouping
+  group_placement_radius 2
+  terrain_to_place_on GRASS
+  min_distance_to_players 10
+  max_distance_to_players 13
+}
+
+create_object GOLD
+{
+  number_of_objects 8
+  set_place_for_every_player
+  set_gaia_object_only
+  set_tight_grouping
+  group_placement_radius 2
+  terrain_to_place_on GRASS
+  min_distance_to_players 14
+  max_distance_to_players 18
+}
+
+create_object STONE
+{
+  number_of_objects 5
+  set_place_for_every_player
+  set_gaia_object_only
+  set_tight_grouping
+  group_placement_radius 2
+  terrain_to_place_on GRASS
+  min_distance_to_players 16
+  max_distance_to_players 21
+}
+
+create_object BOAR
+{
+  number_of_objects 4
+  set_place_for_every_player
+  set_gaia_object_only
+  set_loose_grouping
+  group_placement_radius 5
+  terrain_to_place_on GRASS
+  min_distance_to_players 18
+  max_distance_to_players 24
+}
+
+/* Chop-to forest pockets: explicit one-node placements for reliability. */
+/* west gold pocket, land_id 200. */
+create_object GOLD
+{
+  number_of_objects 1
+  set_gaia_object_only
+  terrain_to_place_on GRASS
+  place_on_specific_land_id 200
+  find_closest
+}
+/* gold node 1/6. */
+
+create_object GOLD
+{
+  number_of_objects 1
+  set_gaia_object_only
+  terrain_to_place_on GRASS
+  place_on_specific_land_id 200
+  find_closest
+}
+/* gold node 2/6. */
+
+create_object GOLD
+{
+  number_of_objects 1
+  set_gaia_object_only
+  terrain_to_place_on GRASS
+  place_on_specific_land_id 200
+  find_closest
+}
+/* gold node 3/6. */
+
+create_object GOLD
+{
+  number_of_objects 1
+  set_gaia_object_only
+  terrain_to_place_on GRASS
+  place_on_specific_land_id 200
+  find_closest
+}
+/* gold node 4/6. */
+
+create_object GOLD
+{
+  number_of_objects 1
+  set_gaia_object_only
+  terrain_to_place_on GRASS
+  place_on_specific_land_id 200
+  find_closest
+}
+/* gold node 5/6. */
+
+create_object GOLD
+{
+  number_of_objects 1
+  set_gaia_object_only
+  terrain_to_place_on GRASS
+  place_on_specific_land_id 200
+  find_closest
+}
+/* gold node 6/6. */
+
+/* west gold pocket, land_id 201. */
+create_object GOLD
+{
+  number_of_objects 1
+  set_gaia_object_only
+  terrain_to_place_on GRASS
+  place_on_specific_land_id 201
+  find_closest
+}
+/* gold node 1/6. */
+
+create_object GOLD
+{
+  number_of_objects 1
+  set_gaia_object_only
+  terrain_to_place_on GRASS
+  place_on_specific_land_id 201
+  find_closest
+}
+/* gold node 2/6. */
+
+create_object GOLD
+{
+  number_of_objects 1
+  set_gaia_object_only
+  terrain_to_place_on GRASS
+  place_on_specific_land_id 201
+  find_closest
+}
+/* gold node 3/6. */
+
+create_object GOLD
+{
+  number_of_objects 1
+  set_gaia_object_only
+  terrain_to_place_on GRASS
+  place_on_specific_land_id 201
+  find_closest
+}
+/* gold node 4/6. */
+
+create_object GOLD
+{
+  number_of_objects 1
+  set_gaia_object_only
+  terrain_to_place_on GRASS
+  place_on_specific_land_id 201
+  find_closest
+}
+/* gold node 5/6. */
+
+create_object GOLD
+{
+  number_of_objects 1
+  set_gaia_object_only
+  terrain_to_place_on GRASS
+  place_on_specific_land_id 201
+  find_closest
+}
+/* gold node 6/6. */
+
+/* west stone pocket, land_id 202. */
+create_object STONE
+{
+  number_of_objects 1
+  set_gaia_object_only
+  terrain_to_place_on GRASS
+  place_on_specific_land_id 202
+  find_closest
+}
+/* stone node 1/6. */
+
+create_object STONE
+{
+  number_of_objects 1
+  set_gaia_object_only
+  terrain_to_place_on GRASS
+  place_on_specific_land_id 202
+  find_closest
+}
+/* stone node 2/6. */
+
+create_object STONE
+{
+  number_of_objects 1
+  set_gaia_object_only
+  terrain_to_place_on GRASS
+  place_on_specific_land_id 202
+  find_closest
+}
+/* stone node 3/6. */
+
+create_object STONE
+{
+  number_of_objects 1
+  set_gaia_object_only
+  terrain_to_place_on GRASS
+  place_on_specific_land_id 202
+  find_closest
+}
+/* stone node 4/6. */
+
+create_object STONE
+{
+  number_of_objects 1
+  set_gaia_object_only
+  terrain_to_place_on GRASS
+  place_on_specific_land_id 202
+  find_closest
+}
+/* stone node 5/6. */
+
+create_object STONE
+{
+  number_of_objects 1
+  set_gaia_object_only
+  terrain_to_place_on GRASS
+  place_on_specific_land_id 202
+  find_closest
+}
+/* stone node 6/6. */
+
+/* west stone pocket, land_id 203. */
+create_object STONE
+{
+  number_of_objects 1
+  set_gaia_object_only
+  terrain_to_place_on GRASS
+  place_on_specific_land_id 203
+  find_closest
+}
+/* stone node 1/6. */
+
+create_object STONE
+{
+  number_of_objects 1
+  set_gaia_object_only
+  terrain_to_place_on GRASS
+  place_on_specific_land_id 203
+  find_closest
+}
+/* stone node 2/6. */
+
+create_object STONE
+{
+  number_of_objects 1
+  set_gaia_object_only
+  terrain_to_place_on GRASS
+  place_on_specific_land_id 203
+  find_closest
+}
+/* stone node 3/6. */
+
+create_object STONE
+{
+  number_of_objects 1
+  set_gaia_object_only
+  terrain_to_place_on GRASS
+  place_on_specific_land_id 203
+  find_closest
+}
+/* stone node 4/6. */
+
+create_object STONE
+{
+  number_of_objects 1
+  set_gaia_object_only
+  terrain_to_place_on GRASS
+  place_on_specific_land_id 203
+  find_closest
+}
+/* stone node 5/6. */
+
+create_object STONE
+{
+  number_of_objects 1
+  set_gaia_object_only
+  terrain_to_place_on GRASS
+  place_on_specific_land_id 203
+  find_closest
+}
+/* stone node 6/6. */
+
+/* east gold pocket, land_id 204. */
+create_object GOLD
+{
+  number_of_objects 1
+  set_gaia_object_only
+  terrain_to_place_on GRASS
+  place_on_specific_land_id 204
+  find_closest
+}
+/* gold node 1/6. */
+
+create_object GOLD
+{
+  number_of_objects 1
+  set_gaia_object_only
+  terrain_to_place_on GRASS
+  place_on_specific_land_id 204
+  find_closest
+}
+/* gold node 2/6. */
+
+create_object GOLD
+{
+  number_of_objects 1
+  set_gaia_object_only
+  terrain_to_place_on GRASS
+  place_on_specific_land_id 204
+  find_closest
+}
+/* gold node 3/6. */
+
+create_object GOLD
+{
+  number_of_objects 1
+  set_gaia_object_only
+  terrain_to_place_on GRASS
+  place_on_specific_land_id 204
+  find_closest
+}
+/* gold node 4/6. */
+
+create_object GOLD
+{
+  number_of_objects 1
+  set_gaia_object_only
+  terrain_to_place_on GRASS
+  place_on_specific_land_id 204
+  find_closest
+}
+/* gold node 5/6. */
+
+create_object GOLD
+{
+  number_of_objects 1
+  set_gaia_object_only
+  terrain_to_place_on GRASS
+  place_on_specific_land_id 204
+  find_closest
+}
+/* gold node 6/6. */
+
+/* east gold pocket, land_id 205. */
+create_object GOLD
+{
+  number_of_objects 1
+  set_gaia_object_only
+  terrain_to_place_on GRASS
+  place_on_specific_land_id 205
+  find_closest
+}
+/* gold node 1/6. */
+
+create_object GOLD
+{
+  number_of_objects 1
+  set_gaia_object_only
+  terrain_to_place_on GRASS
+  place_on_specific_land_id 205
+  find_closest
+}
+/* gold node 2/6. */
+
+create_object GOLD
+{
+  number_of_objects 1
+  set_gaia_object_only
+  terrain_to_place_on GRASS
+  place_on_specific_land_id 205
+  find_closest
+}
+/* gold node 3/6. */
+
+create_object GOLD
+{
+  number_of_objects 1
+  set_gaia_object_only
+  terrain_to_place_on GRASS
+  place_on_specific_land_id 205
+  find_closest
+}
+/* gold node 4/6. */
+
+create_object GOLD
+{
+  number_of_objects 1
+  set_gaia_object_only
+  terrain_to_place_on GRASS
+  place_on_specific_land_id 205
+  find_closest
+}
+/* gold node 5/6. */
+
+create_object GOLD
+{
+  number_of_objects 1
+  set_gaia_object_only
+  terrain_to_place_on GRASS
+  place_on_specific_land_id 205
+  find_closest
+}
+/* gold node 6/6. */
+
+/* east stone pocket, land_id 206. */
+create_object STONE
+{
+  number_of_objects 1
+  set_gaia_object_only
+  terrain_to_place_on GRASS
+  place_on_specific_land_id 206
+  find_closest
+}
+/* stone node 1/6. */
+
+create_object STONE
+{
+  number_of_objects 1
+  set_gaia_object_only
+  terrain_to_place_on GRASS
+  place_on_specific_land_id 206
+  find_closest
+}
+/* stone node 2/6. */
+
+create_object STONE
+{
+  number_of_objects 1
+  set_gaia_object_only
+  terrain_to_place_on GRASS
+  place_on_specific_land_id 206
+  find_closest
+}
+/* stone node 3/6. */
+
+create_object STONE
+{
+  number_of_objects 1
+  set_gaia_object_only
+  terrain_to_place_on GRASS
+  place_on_specific_land_id 206
+  find_closest
+}
+/* stone node 4/6. */
+
+create_object STONE
+{
+  number_of_objects 1
+  set_gaia_object_only
+  terrain_to_place_on GRASS
+  place_on_specific_land_id 206
+  find_closest
+}
+/* stone node 5/6. */
+
+create_object STONE
+{
+  number_of_objects 1
+  set_gaia_object_only
+  terrain_to_place_on GRASS
+  place_on_specific_land_id 206
+  find_closest
+}
+/* stone node 6/6. */
+
+/* east stone pocket, land_id 207. */
+create_object STONE
+{
+  number_of_objects 1
+  set_gaia_object_only
+  terrain_to_place_on GRASS
+  place_on_specific_land_id 207
+  find_closest
+}
+/* stone node 1/6. */
+
+create_object STONE
+{
+  number_of_objects 1
+  set_gaia_object_only
+  terrain_to_place_on GRASS
+  place_on_specific_land_id 207
+  find_closest
+}
+/* stone node 2/6. */
+
+create_object STONE
+{
+  number_of_objects 1
+  set_gaia_object_only
+  terrain_to_place_on GRASS
+  place_on_specific_land_id 207
+  find_closest
+}
+/* stone node 3/6. */
+
+create_object STONE
+{
+  number_of_objects 1
+  set_gaia_object_only
+  terrain_to_place_on GRASS
+  place_on_specific_land_id 207
+  find_closest
+}
+/* stone node 4/6. */
+
+create_object STONE
+{
+  number_of_objects 1
+  set_gaia_object_only
+  terrain_to_place_on GRASS
+  place_on_specific_land_id 207
+  find_closest
+}
+/* stone node 5/6. */
+
+create_object STONE
+{
+  number_of_objects 1
+  set_gaia_object_only
+  terrain_to_place_on GRASS
+  place_on_specific_land_id 207
+  find_closest
+}
+/* stone node 6/6. */
+
+/* Ambient and neutral objects. */
+create_object HAWK
+{
+  number_of_objects 6
+  set_scaling_to_map_size
+}
+
+create_object FISH
+{
+  number_of_objects 20
+  set_gaia_object_only
+  set_loose_grouping
+  group_placement_radius 5
+  terrain_to_place_on WATER
+}
+
+create_object RELIC
+{
+  number_of_objects 5
+  set_gaia_object_only
+  terrain_to_place_on GRASS
+  min_distance_to_players 30
+  max_distance_to_players 80
+}
+
+/* Known limitation: RMS generation still needs in-game testing in AoE2 DE. */
