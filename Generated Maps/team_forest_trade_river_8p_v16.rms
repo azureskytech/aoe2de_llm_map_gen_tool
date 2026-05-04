@@ -7,7 +7,6 @@
 */
 
 <PLAYER_SETUP>
-direct_placement
 behavior_version 1
 override_map_size 480
 team_positions
@@ -712,7 +711,6 @@ create_land
   border_fuzziness 2
   set_circular_base
   land_id 1
-  assign_to_player 1
   zone 1
   other_zone_avoidance_distance 2
 }
@@ -726,7 +724,6 @@ create_land
   border_fuzziness 2
   set_circular_base
   land_id 2
-  assign_to_player 2
   zone 2
   other_zone_avoidance_distance 2
 }
@@ -740,7 +737,6 @@ create_land
   border_fuzziness 2
   set_circular_base
   land_id 3
-  assign_to_player 3
   zone 3
   other_zone_avoidance_distance 2
 }
@@ -754,7 +750,6 @@ create_land
   border_fuzziness 2
   set_circular_base
   land_id 4
-  assign_to_player 4
   zone 4
   other_zone_avoidance_distance 2
 }
@@ -768,7 +763,6 @@ create_land
   border_fuzziness 2
   set_circular_base
   land_id 5
-  assign_to_player 5
   zone 5
   other_zone_avoidance_distance 2
 }
@@ -782,7 +776,6 @@ create_land
   border_fuzziness 2
   set_circular_base
   land_id 6
-  assign_to_player 6
   zone 6
   other_zone_avoidance_distance 2
 }
@@ -796,7 +789,6 @@ create_land
   border_fuzziness 2
   set_circular_base
   land_id 7
-  assign_to_player 7
   zone 7
   other_zone_avoidance_distance 2
 }
@@ -810,7 +802,6 @@ create_land
   border_fuzziness 2
   set_circular_base
   land_id 8
-  assign_to_player 8
   zone 8
   other_zone_avoidance_distance 2
 }
@@ -1502,19 +1493,31 @@ create_object HAWK
 
 create_object FISH
 {
-  number_of_objects 20
+  number_of_objects 80
+  number_of_groups 8
   set_gaia_object_only
   set_loose_grouping
-  group_placement_radius 5
+  group_placement_radius 4
   terrain_to_place_on WATER
+}
+
+/* 1 relic near each player TC (8 total), plus 2 neutral relics. */
+create_object RELIC
+{
+  number_of_objects 1
+  set_place_for_every_player
+  set_gaia_object_only
+  terrain_to_place_on GRASS
+  min_distance_to_players 12
+  max_distance_to_players 22
 }
 
 create_object RELIC
 {
-  number_of_objects 5
+  number_of_objects 2
   set_gaia_object_only
   terrain_to_place_on GRASS
-  min_distance_to_players 30
+  min_distance_to_players 35
   max_distance_to_players 80
 }
 

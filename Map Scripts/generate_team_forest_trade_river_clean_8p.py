@@ -965,7 +965,8 @@ def terrain_land_blocks(
                 land_id=start.player_id,
                 circular=True,
                 extra_lines=[
-                    f"assign_to_player {start.player_id}",
+                    # No assign_to_player: the engine distributes players to geographic
+                    # clusters so team_positions correctly separates teams for any player count.
                     f"zone {start.player_id}",
                     "other_zone_avoidance_distance 2",
                 ],
@@ -1135,24 +1136,40 @@ def object_generation_blocks(*, pocket_gold_nodes: int, pocket_stone_nodes: int)
                 ],
             ),
             "",
+            # 80 fish in 8 groups forces the engine to seed 8 separate placement
+            # attempts along the river, distributing fish instead of clustering them.
             object_block(
                 "FISH",
                 [
-                    "number_of_objects 20",
+                    "number_of_objects 80",
+                    "number_of_groups 8",
                     "set_gaia_object_only",
                     "set_loose_grouping",
-                    "group_placement_radius 5",
+                    "group_placement_radius 4",
                     "terrain_to_place_on WATER",
+                ],
+            ),
+            "",
+            "/* 1 relic near each player TC (8 total), plus 2 neutral relics. */",
+            object_block(
+                "RELIC",
+                [
+                    "number_of_objects 1",
+                    "set_place_for_every_player",
+                    "set_gaia_object_only",
+                    "terrain_to_place_on GRASS",
+                    "min_distance_to_players 12",
+                    "max_distance_to_players 22",
                 ],
             ),
             "",
             object_block(
                 "RELIC",
                 [
-                    "number_of_objects 5",
+                    "number_of_objects 2",
                     "set_gaia_object_only",
                     "terrain_to_place_on GRASS",
-                    "min_distance_to_players 30",
+                    "min_distance_to_players 35",
                     "max_distance_to_players 80",
                 ],
             ),
@@ -1233,7 +1250,6 @@ def generate_rms(
         "*/",
         "",
         "<PLAYER_SETUP>",
-        "direct_placement",
         "behavior_version 1",
         f"override_map_size {map_size}",
         "team_positions",
